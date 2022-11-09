@@ -13,7 +13,7 @@
 
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Index</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -48,13 +48,14 @@
   </div>
 </nav>
 
+
 <form action="pagina2.php">
 <input type="text"  name="n1">
 <select name="op">
-    <option value="+"></option>
-    <option value="-"></option>
-    <option value="*"></option>
-    <option value="+"></option>
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
 </select>
 <input type="text" name="n2">
 <input type="submit">
