@@ -5,33 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" type="text/practica1" href="text.css">
+   <link rel="stylesheet" href="css\text.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 
 
-
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Index</a>
+    <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="http://localhost/practica1/index.php?#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="login.php">Login</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            dropdown
+            Options
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="register.php">Registros</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -41,16 +40,13 @@
           <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+     
     </div>
   </div>
 </nav>
 
-<center>
-<form  action="pagina2.php" >
+<form>
+<h1>Calculadora</h1>
 <input type="number"  name="n1">
 <select name="op">
     <option value="+">+</option>
@@ -63,20 +59,43 @@
 
 </form>
 
-</center>
+<?php
 
-<center>
-<form method="post">
-    	<h1>Registrate</h1>
-    	<input type="text" name="name" placeholder="Nombre completo">
-    	<input type="email" name="email" placeholder="Email">
-    	<input type="submit" name="register">
-    </form>
 
-   
-    </center>
-      
+
+
+$n1 = 0;
+$n2 = 0;
+$op = '+';
+$resultado = 0;
+
+
+
+
+if ($op=="+"){
+  $n1 = $_GET['n1'];
+  $resultado = $n1 + $n2;
+} else if ($op =="-"){
+  $n1 = $_GET ['n2'];
+    $resultado = $n1 - $n2;
+}else if ($op =="*"){
+  
+    $resultado = $n1*$n2;
+}else{
+
+    $resultado = $n1/$n2;
+}
+
+echo "el reesultado es :" . $resultado
+
+
+?>
+
+
+
+     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 </body>
 </html>
 
