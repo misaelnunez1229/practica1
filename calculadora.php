@@ -33,11 +33,11 @@
             <li><a class="dropdown-item" href="register.php">Registros</a></li>
             <li><a class="dropdown-item" href="calculadora.php">Calculadora</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">puestos disponibles</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link disabled">...</a>
         </li>
       </ul>
      

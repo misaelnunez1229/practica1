@@ -25,9 +25,43 @@
     	<input  type="text" name="name" placeholder="usuario" required >
     	<input type="password" name="pass" placeholder="password" required >
     	<input type="submit" name="register" >
+      <p><a href="register.php">Crear cuenta</a></p>
     </form>
 
 
+    <?php
+    
+    $msg = '';
+
+    if (isset($_POST['usuario'])&& !empty($_POST['password']))
+  {
+
+if ($_POST['usuario'] == 'misa' &&
+    $_POST['password'] == '4300' ) {
+      $_SESSION['valid'] = true;
+     $_SESSION['timeout'] = time();
+     $_SESSION['username'] = 'misa';
+
+     echo  'yo estoy dentro '.$_POST['usuario'];
+    }else {
+      $msg = 'Wrong username or password'.$_POST['misa'];
+   }
+
+  }
+
+
+    
+    
+    
+    
+    
+    ?>
+    
+    
+    
+    
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 
