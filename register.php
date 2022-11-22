@@ -16,33 +16,7 @@
     
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="http://localhost/practica1/index.php?#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Options
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="register.php">Registros</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
+  <a href="index.php"> <img src="https://www.iloveimg.com/img/iloveimg.svg" alt="error de imagen" > </a>
      
     </div>
   </div>
@@ -52,45 +26,16 @@
 
 
 
-<section class="form-register"> <form action="register.php" method="post">
+<section class="form-register"> <form action="principal.php" method="post">
 <h4>Formulario Registro</h4>
-<input class="controls" type="text"  name="nombre" id="nombre" placeholder="nombre">
-<input class="controls" type="text"  name="apellido" id="apellido" placeholder="apellido">
-<input class="controls" type="text"  name="edad" id="edad" placeholder="edad">
-<input class="controls" type="text"  name="cedula" id="cedula" placeholder="cedula">
+<input class="controls" type="text"  name="nombre" id="nombre" placeholder="nombre" required>
+<input class="controls" type="text"  name="apellido" id="apellido" placeholder="apellido" required>
+<input class="controls" type="text"  name="edad" id="edad" placeholder="edad" required>
+<input class="controls" type="text"  name="cedula" id="cedula" placeholder="cedula" required>
 <p> Estoy de acuerdo con <a href="#">terminos y condiciones</a></p>
 <input class="botons" type="submit" value="registrar">
-<p><a href="#">ya tengo cuenta?</a></p>
+<p><a href="login.php">ya tengo cuenta?</a></p>
 </form>
-
-
-<?php 
-
-
-if(isset($_POST['btn1']))
-{
-
- include("conexion.php");
-
-
- 
- $nombre = $_POST['nombre'];
- $apellido = $_POST['apellido'];
- $edad = $_POST['edad'];
- $cedula = $_POST['cedula'];
- 
-
- 
-$conexion->query("INSERT INTO $tabla_db1 (nombre,apellido,edad,cedula) values ('$nombre','$apellido','$edad','$cedula')");
- include("cerar_conexion.php");
-echo "se insertaron correctamente";
-
-}
-
-echo "$nombre,$apellido,$edad,$cedula";
-
-?>
-
 
 
 </section>
