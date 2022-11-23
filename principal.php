@@ -1,3 +1,6 @@
+
+
+
 <?php
    ob_start();
    session_start();
@@ -20,7 +23,7 @@
 
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-  <a href="index.php"> <img src="https://www.iloveimg.com/img/iloveimg.svg" alt="error de imagen" > </a>
+  <a href=""> <img src="https://www.iloveimg.com/img/iloveimg.svg" alt="error de imagen" > </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -52,6 +55,7 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+      <a href="logout.php" class='btn btn-close'></a>
     </div>
   </div>
 </nav>
@@ -65,13 +69,13 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/slider1.jpg" class="d-block w-100" alt="...">
+      <img src="img/slider3.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
       <img src="img/slider2.jpg" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="img/slider3.jpg" class="d-block w-100" alt="...">
+      <img src="img/slider1.jpg" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -119,6 +123,14 @@
 
 
 
+<?php
+ 
+$_SESSION['username'] = 'misa';
+ 
+ echo "Bienvenido " . $_SESSION['username'];
+
+
+?>
 
 
 

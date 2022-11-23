@@ -38,7 +38,6 @@
             Options
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="register.php">Registros</a></li>
             <li><a class="dropdown-item" href="calculadora.php">Calculadora</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Puestos disponibless</a></li>

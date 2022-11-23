@@ -20,7 +20,7 @@
 
 
 
-<form   action = "principal.php" method="post" >
+<form   method="post" >
     	<h1>Login</h1>
     	<input  type="text" name="name" placeholder="usuario" required >
     	<input type="password" name="pass" placeholder="password" required >
@@ -32,26 +32,38 @@
     <?php
     
     $msg = '';
-
-    if (isset($_POST['usuario'])&& !empty($_POST['password']))
+      // echo $_POST['name'];
+    if (isset($_POST['register'])&& !empty($_POST['name']))
   {
+    // echo 'estoy dentro del primer if';
 
-if ($_POST['usuario'] == 'misa' &&
-    $_POST['password'] == '4300' ) {
-      $_SESSION['valid'] = true;
-     $_SESSION['timeout'] = time();
-     $_SESSION['username'] = 'misa';
+    if ($_POST['name'] == 'misa' &&
+        $_POST['pass'] == '4300' ) {
+          $_SESSION['valid'] = true;
+        $_SESSION['timeout'] = time();
+        $_SESSION['username'] = 'misa';
 
-     echo  'yo estoy dentro '.$_POST['usuario'];
-    }else {
-      $msg = 'Wrong username or password'.$_POST['misa'];
-   }
+        
 
-  }
+// Redirect browser
+header("Location: principal.php");
+
+exit;
 
 
-    
-    
+        //echo  'yo estoy dentro '.$_POST['name'];
+        }
+        else {
+          
+         
+          $msg = 'informacion incrrecta '.$_POST['name'];
+          echo $msg;
+      }
+   
+
+
+
+  } 
     
     
     
